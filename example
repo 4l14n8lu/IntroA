@@ -1,7 +1,0 @@
-<script>
-    var firstName = prompt("Please enter your FIRST name.");
-    var lastName = prompt("Please enter your LAST name.");
-    var cake = prompt("What is your favorite cake flavor?");
-    
-    alert(firstName + " " + lastName + " " + "likes " + cake + " Cake!")
-</script>
