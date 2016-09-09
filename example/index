@@ -1,8 +1,7 @@
 <script>
-    var answer = prompt("What is 2 + 2?");
+    var firstName = prompt("Please enter your FIRST name.");
+    var lastName = prompt("Please enter your LAST name.");
+    var cake = prompt("What is your favorite cake flavor?");
     
-    if (answer === "5") {
-        alert("You are truly blessed by Squajo.") }
-    else {
-        alert("What kind of fucking idiot are you?") }
+    alert(firstName + " " + lastName + " " + "likes " + cake + " Cake!")
 </script>
