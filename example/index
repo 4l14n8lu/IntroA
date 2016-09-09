@@ -1,0 +1,8 @@
+<script>
+    var answer = prompt("What is 2 + 2?");
+    
+    if (answer === "5") {
+        alert("You are truly blessed by Squajo.") }
+    else {
+        alert("What kind of fucking idiot are you?") }
+</script>
