@@ -16,14 +16,21 @@ gasMileage(prompt("How many miles does your odometer read?"), prompt("How much g
 </script>
 
 <script>
-//Daily Value is Sugar / Daily Value * 100
-
-var dailyValue = function (sugar) {
+//Percentage is Sugar / Daily Value * 100
     
-    var value = sugar/25 * 100
+    var gender = prompt("Are you male or female?")
     
-    alert("The product is " + value + "% Daily Value");
-};
-
-dailyValue(prompt("How much sugar is in the food product?"));
+    var value = 0
+    
+    if (gender === "male") {
+         value = 32
+    } else {
+        value = 25 }
+    
+    var calculate = function(sugar, dv) {
+        var percent = sugar / dv * 100;
+        alert("Your Daily Value is " + percent + "%.");
+    }
+    
+    calculate(prompt("How much sugar is in the product?"),value)
 </script>
