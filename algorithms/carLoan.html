@@ -1,0 +1,25 @@
+<script>
+//CAR LOAN
+//Create a program that tells the user how much money in interest they will pay on their car loan. Allow the user to tell the program how much money they're lending and the interest rate for the loan. Compute interest monthly.
+
+//First I will need to understand how a car loan works. Then I will need to find the $$$ amount and the interest %. I will have to calculate it for every month.
+//The formula for interest is A = P(1 + rt). The total amount (A), is what I'm looking for!
+
+//Principal (P), will be inputed by the user. Interest Rate (R) will be calculated by inserting the user inputted rate into a formula-function that converts it into a decimal for mathematical use within the master. Time (T) will be a flat amount, which is defined as 1 month - or .08 of a year. 
+
+//P(1 + rt)
+
+var Principal = prompt("What is the principal cost?")
+
+var Interest = prompt("What is the interest rate?")
+
+    function carLoan (Principal, Interest) {
+        var newInterest = Interest / 100
+        var rateTime = newInterest * .08
+        var principalDistribute = Principal * 1 + Principal * rateTime
+        var rawInterest = principalDistribute - Principal
+        alert("Your Car Loan is: " + principalDistribute + ". The amount you have to pay in Interest is: " + rawInterest);
+};
+
+carLoan(Principal, Interest);
+</script>

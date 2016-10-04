@@ -1,0 +1,51 @@
+<script>
+//CASH REGISTER
+//Calculate the amount of change in dollars, quarters, nickels, dimes, and pennies owed to a customer who purchases an item. Ask them how much money the item costs and how much they're spending.
+
+//I should find how much the item cost. Then I have to find out how much the consumer actually spent on the product, and subtract them both. The difference calculated will be the change, and I have to divide it into dollars, quarters, nickels, dimes, and pennies.
+
+var itemCost = prompt("How much does the item cost?")
+var consumerSpend = prompt("How much did you spend on the item?")
+var change = (consumerSpend - itemCost)
+
+    function cashRegister(change) {
+    
+var dollar = (change / 1) >> 0
+console.log("Dollars: " + dollar);
+
+var changeQuarter = change - dollar
+var quarter = (changeQuarter / .25) >> 0
+console.log("Quarters: " + quarter);
+
+var quarterValue = quarter * .25
+var dollarQuarter = dollar + quarterValue
+
+var changeDime = change - dollarQuarter
+var dime = (changeDime / .10) >> 0
+console.log("Dimes: " + dime);
+
+//For Ease of Use, var dollarQuarterDime has been renamed to dQD
+var dimeValue = dime * .10
+var dQD = dollar + quarterValue + dimeValue
+
+var changeNickel = change - dQD
+var nickel = (changeNickel / .05) >> 0
+console.log("Nickels: " + nickel);
+
+//For Ease of Use, var dollarQuarterDimeNickel has been renamed to dQDN
+var nickelValue = nickel * .05
+var dQDN = dollar + quarterValue + dimeValue + nickelValue
+
+var changePenny = change - dQDN
+
+//Pennies are low denominations that conflict with rounding.
+    if (changePenny > .04) {
+    } else {
+        changePenny = change - dQDN + .01 }
+
+var penny = (changePenny / .01) >> 0
+console.log("Pennies: " + penny);
+};
+
+cashRegister(change)
+</script>
