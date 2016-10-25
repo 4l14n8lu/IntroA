@@ -1,0 +1,22 @@
+<script>
+var text = prompt("What would you like to let scribes of the Ancient know?")
+var hits = []
+
+for(var i = 0; i < text.length; i++){
+    if (text[i] === "c") {
+            hits.push(text[i]);
+    }
+}
+
+for(var i = 0; i < text.length; i++){
+    if (text[i] === "C") {
+            hits.push(text[i]);
+    }
+}
+
+if (hits.length === 0) {
+    console.log("The scribes could not devise your trickery, mortal. The Ancient is greatly displeased.");
+} else {
+    console.log(hits.length);
+}
+</script>
