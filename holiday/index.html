@@ -1,0 +1,43 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<audio controls autoplay>
+  <source src="halloweenspooky.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<div class="pageWrapper">
+	<h1 class="centerMe">Happy Halloween!</h1>
+    <div id="photoWrapper">
+		<img src="" id="thePhoto">
+		<button id="backBtn" type="button">Back</button>
+		<button id="forwardBtn" type="button">Forward</button>
+	</div>
+	<p class="centerMe">Happy Halloween! May your bags be full of candy and your neck free of vampire bites!
+	</p>
+
+	<!-- Draw the chart here! -->
+	<div id="chart_div"></div>
+</div>
+
+<div onmouseover="mOver(this)"><p id="evillaugh">They say an evil monster lurks in HTML...<p></div>
+
+<script>
+  function mOver(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
+</script>
+<audio id="audio" src="evillaugh.mp3" type ="audio/mpeg"></audio>
+
+<!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="jquerycode.js"
+        type="text/javascript"></script>
+<script src="myjs.js" type="text/javascript"></script>
+</body>
+</html>
